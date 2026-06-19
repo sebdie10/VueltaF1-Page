@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueltaF1</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Hanken+Grotesk:wght@700;800&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#ffb4a8",
+                    "on-surface": "#e5e2e1",
+                    "tertiary-fixed": "#e5e2e1",
+                    "on-secondary": "#003543",
+                    "surface-variant": "#353534",
+                    "surface-container-highest": "#353534",
+                    "surface-container-high": "#2a2a2a",
+                    "on-primary-fixed-variant": "#930300",
+                    "tertiary-fixed-dim": "#c8c6c5",
+                    "on-background": "#e5e2e1",
+                    "surface-container": "#201f1f",
+                    "surface-container-lowest": "#0e0e0e",
+                    "outline-variant": "#5e3f3a",
+                    "inverse-surface": "#e5e2e1",
+                    "tertiary": "#c8c6c5",
+                    "surface-dim": "#131313",
+                    "secondary-fixed-dim": "#47d6ff",
+                    "tertiary-container": "#717070",
+                    "primary": "#39ff14",
+                    "on-primary-container": "#fff2f0",
+                    "on-tertiary-container": "#f8f5f4",
+                    "on-primary-fixed": "#410100",
+                    "on-secondary-fixed-variant": "#004e60",
+                    "error-container": "#93000a",
+                    "secondary": "#a5e7ff",
+                    "on-tertiary-fixed": "#1b1b1c",
+                    "on-surface-variant": "rgb(153 150 149)",
+                    "surface": "#131313",
+                    "on-secondary-container": "#00566a",
+                    "on-primary": "#680200",
+                    "on-error-container": "#ffdad6",
+                    "error": "#ffb4ab",
+                    "surface-container-low": "#1c1b1b",
+                    "inverse-primary": "#c00500",
+                    "primary-fixed": "#ffdad4",
+                    "secondary-container": "#00d2ff",
+                    "inverse-on-surface": "#313030",
+                    "outline": "#af8781",
+                    "surface-bright": "#3a3939",
+                    "secondary-fixed": "#b6ebff",
+                    "on-secondary-fixed": "#001f28",
+                    "background": "#131313",
+                    "on-tertiary-fixed-variant": "#474746",
+                    "primary-fixed-dim": "#ffb4a8",
+                    "on-tertiary": "#303030",
+                    "primary-container": "#e10600",
+                    "on-error": "#690005",
+                    "FERRARI": "rgb(220, 38, 38)",
+                    "MERCEDES": "rgb(96, 165, 250)",
+                    "MCLAREN":"rgb(251, 146, 60)",
+                    "RED": "rgb(30, 64, 175)",
+                    "ASTON": "rgb(22, 163, 74)",
+                    "WILLIAMS": "rgb(59, 130, 246)",
+                    "ALPINE": "rgb(209 18 188)",
+                    "HAAS": "rgb(239, 68, 68)",
+                    "AUDI": "rgb(244, 63, 94)",
+                    "CADILLAC": "rgb(66 27 34)",
+                    "RACING": "rgb(147, 197, 253)",
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "16px",
+                    "xs": "4px",
+                    "md": "16px",
+                    "base": "4px",
+                    "xl": "40px",
+                    "lg": "24px",
+                    "container-margin": "24px",
+                    "sm": "8px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "label-caps": ["JetBrains Mono"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-sm": ["Inter"],
+                    "headline-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0.4) 50%, rgba(10, 10, 10, 0) 100%);
+        }
+        .race-card-hover:hover {
+            border-left: 2px solid #E10600;
+            background-color: #1A1A1A;
+        }
+        body {
+            background-color: #0A0A0A;
+            color: #e5e2e1;
+        }
+    </style>
+    <script type="module" crossorigin src="/assets/index-Dcq4nmdU.js"></script>
+  </head>
+  <body>
+      <nav style="
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+">
+  <!-- LOGO -->
+  <div>
+    <a href="/" class="text-[#39ff14] px-xl py-md font-bold text-lg active:scale-95 transition-all hover:#39ff14/10 flex items-center justify-center">
+      <div class="flex flex-col">
+        <h1 class="text-xl font-black tracking-tight text-white">
+          VUELTA <span class="text-[#39ff14]">F1</span>
+        </h1>
+      </div>
+    </a>
+  </div>
+
+  <!-- LINKS -->
+  <div style="display: flex; gap: 20px;">
+    <a href="/" style="color: white; text-decoration: none;">Home</a>
+    <a href="/clasificacion" style="color: white; text-decoration: none;">Clasificación</a>
+    <a href="/calendario" style="color: white; text-decoration: none;">Calendario</a>
+  </div>
+</nav>
+
+
+
+    <div id="root"></div>
+
+
+
+
+    <script src="https://apis.google.com/js/platform.js"></script>
+  </body>
+</html>
